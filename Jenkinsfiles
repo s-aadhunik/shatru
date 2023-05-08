@@ -28,6 +28,7 @@ pipeline {
                     junit '**/target/surefire-reports/TEST-*.xml'
                     archiveArtifacts 'target/*.jar'
                 }
+                return_1_if_success.exe
             }
         }
     }
