@@ -16,12 +16,13 @@ pipeline {
 
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                return_1_if_success.exe
 
                 // To run Maven on a Windows agent, use
                 bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                return_1_if_success.exe
             }
-            IF %ERRORLEVEL% EQU 1 (exit /B 0) ELSE (exit /B 1)'''
-
+            
             post {
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
