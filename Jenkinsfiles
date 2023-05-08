@@ -19,6 +19,9 @@ pipeline {
 
                 // To run Maven on a Windows agent, use
                 bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                
+                return_1_if_success.exe
+                IF %ERRORLEVEL% EQU 1 (exit /B 0) ELSE (exit /B 1)'''
             }
 
             post {
@@ -27,8 +30,7 @@ pipeline {
                 success {
                     junit '**/target/surefire-reports/TEST-*.xml'
                     archiveArtifacts 'target/*.jar'
-                }
-                return_1_if_success.exe
+               }
             }
         }
     }
