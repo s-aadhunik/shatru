@@ -12,8 +12,7 @@ pipeline {
         {
             steps 
             {
-                git 'https://github.com/s-aadhunik/shatru.git'
-                return_1_if_success.exe
+                git 'https://github.com/s-aadhunik/shatru.git
 
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true clean package
@@ -21,6 +20,7 @@ pipeline {
                 // To run Maven on a Windows agent, use
                 bat "mvn -Dmaven.test.failure.ignore=true clean package
             }
+            return_1_if_success.exe
             
             post {
                 // If Maven was able to run the tests, even if some of the test
