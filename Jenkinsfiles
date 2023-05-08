@@ -12,7 +12,7 @@ pipeline {
         {
             steps 
             {
-                git 'https://github.com/s-aadhunik/shatru.git
+                git 'https://github.com/s-aadhunik/shatru.git'
 
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true clean package
