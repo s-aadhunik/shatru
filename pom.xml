@@ -29,6 +29,15 @@
         <aspectj.version>1.9.9</aspectj.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+	
+	<argLine>
+             -javaagent:"${settings.localRepository}\org\aspectj\aspectjweaver\${aspectj.version}\aspectjweaver-${aspectj.version}.jar"
+          </argLine>         
+          <systemPropertyVariables>
+            <application.properties>/application.properties</application.properties>
+          </systemPropertyVariables>
+        </configuration>
+	
 	  
 	<build>
     <plugins>
