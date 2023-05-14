@@ -38,6 +38,13 @@
           </systemPropertyVariables>
         </configuration>
 	
+	
+	<profile>
+      <id>chrome</id>
+      <properties>
+        <capabilities>/chrome.capabilities</capabilities>
+      </properties>
+    </profile>
 	  
 	<build>
     <plugins>
