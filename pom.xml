@@ -11,7 +11,6 @@
                 <maven.compiler.target>11.0.18</maven.compiler.target>		
 		</properties>
 	<dependency>
-		<dependency>
 			<groupId>Junit</groupId>
                        <artifactId>Junit</artifactId>
 			<version>4.11</version>
@@ -23,21 +22,25 @@
       <artifactId>selenium-java</artifactId>
       <version>3.141.59</version>
     </dependency>
+
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>6.11</version>
     </dependency>
+
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-api</artifactId>
       <version>3.141.59</version>
     </dependency>
+
 <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
       <version>2.4.52</version>	
 	</dependency>
+
   <!-- browsers -->
 	<profile>
       <id>chrome</id>
