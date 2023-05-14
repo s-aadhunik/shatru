@@ -10,6 +10,12 @@
 		<maven.compiler.source>11.0.18</maven.compiler.source>
                 <maven.compiler.target>11.0.18</maven.compiler.target>		
 		</properties>
+<properties>
+        <maven.compiler.source>1.8</maven.compiler.source> (3)
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+	
 	<dependency>
 			<groupId>Junit</groupId>
                        <artifactId>Junit</artifactId>
