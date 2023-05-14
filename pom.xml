@@ -5,7 +5,20 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 	
-  <dependency>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>11.0.18</maven.compiler.source>
+                <maven.compiler.target>11.0.18</maven.compiler.target>		
+		</properties>
+	<dependency>
+		<dependency>
+			<groupId>Junit</groupId>
+                       <artifactId>Junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+			</dependency>
+		</dependency>
+<dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>3.141.59</version>
@@ -20,41 +33,18 @@
       <artifactId>selenium-api</artifactId>
       <version>3.141.59</version>
     </dependency>
-
 <dependency>
       <groupId>org.apache.httpcomponents</groupId>
       <artifactId>httpclient</artifactId>
       <version>2.4.52</version>	
- <properties>
-        <aspectj.version>1.9.9</aspectj.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-	
-	<argLine>
-             -javaagent:"${settings.localRepository}\org\aspectj\aspectjweaver\${aspectj.version}\aspectjweaver-${aspectj.version}.jar"
-          </argLine>         
-          <systemPropertyVariables>
-            <application.properties>/application.properties</application.properties>
-          </systemPropertyVariables>
-        </configuration>
-	<!-- environments -->
-    <profile>
-      <id>localhost</id>
-      <properties>
-        <site.url>http://localhost/</site.url>
-      </properties>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-    </profile>
-	 <!-- browsers -->
+	</dependency>
+  <!-- browsers -->
 	<profile>
       <id>chrome</id>
       <properties>
         <capabilities>/chrome.capabilities</capabilities>
       </properties>
     </profile>
-	  
 	<build>
     <plugins>
       <plugin>
@@ -73,15 +63,4 @@
       </plugin>
     </plugins>
   </build>
-
-  <dependencies>
-		<groupId>log4j</groupId>
-		<artifactId>log4j</artifactId>
-		<version>1.2.17</version>
-</dependency>
-	  <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>3.12.0</version>
-    </dependency>
-   </project>  
+ </project>  
