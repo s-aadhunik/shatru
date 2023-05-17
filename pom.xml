@@ -11,7 +11,7 @@
         <maven.compiler.target>11.0.18</maven.compiler.target>
     </properties>
 	
-            <plugin>
+              <properties>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.6.3</version>
@@ -19,7 +19,7 @@
                     <source>11.0.19</source>
                     <target>11.0.19</target>
                 </configuration>
-            </plugin>
+            </properties>
 	
 <dependencies>
   <dependency>
