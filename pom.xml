@@ -11,6 +11,12 @@
         <maven.compiler.target>11.0.18</maven.compiler.target>
     </properties>
 	
+<dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-api</artifactId>
+      <version>3.141.59</version>
+    </dependency>
+	
 <dependencies>
   <dependency>
     <groupId>junit</groupId>
